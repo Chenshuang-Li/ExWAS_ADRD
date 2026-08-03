@@ -13,7 +13,7 @@ Alzheimer's Association*. (Under review).
 2.Pipeline
 Run the three scripts in order:
 
-01_ExWAS_Cox.R — Data preparation; univariate Cox regression for each exposure (ExWAS); multiple-testing correction; correlation-based clustering to remove redundant exposures.
+01_ExWAS_Cox.R — Data preparation; univariate Cox regression for each exposure (ExWAS); multiple-testing correction; correlation-based clustering.
 02_Prediction_Model.R — Case-control matching; nested cross-validation (LASSO + XGBoost) to build an exposome-based prediction model; SHAP values; comparison against covariate-only and covariate+exposure models (AUC, NRI, IDI).
 03_ERS_Survival.R — Construct the Exposomic Risk Score (ERS); stratify into quartiles; Cox and Kaplan-Meier survival analysis by ERS quartile.
 
@@ -40,12 +40,16 @@ outcome.parquet — eid, ADRD, time_ADRD
 covariates.parquet — eid, sex, age, ethnicity, APOE_status, overall_health, and assessment_center
 exposures.parquet — eid, one column per candidate exposure
 
-Data are not included in this repository due to data use agreement restrictions.. The data used in the present study are available from UKB with restrictions applied. Data were used under license and are thus not publicly available. Access to the UKB data can be requested through a standard protocol (https://www.ukbiobank.ac.uk/register-apply/).
+Data are not included in this repository due to data use agreement restrictions. The data used in the present study are available from UKB with restrictions applied. Data were used under license and are thus not publicly available. Access to the UKB data can be requested through a standard protocol (https://www.ukbiobank.ac.uk/register-apply/).
 
 3.Outputs
 Results are written to <project_dir>/results/ADRD/All/, including Cox regression results, selected exposures, the fitted prediction model and SHAP object, model comparison metrics, and ERS survival analysis results.
 
-4.Citation
+4.Scope of this repository
+The three scripts provided here implement the full analytic pipeline for the primary analysis: incident ADRD, total population. The identical pipeline (same code logic, same sequence of steps) was
+also applied to generate the secondary outcome (incident Alzheimer's disease) and the subgroup analyses reported in the manuscript (stratified by age at baseline, sex, genetic risk, and ethnicity). Separate code is not provided for each outcome/subgroup combination, as all analyses share the same underlying pipeline.
+
+5.Citation
 If you use this code, please cite:
 Li C, Zhao C, Lan Y, Ellis RJ, Isaac S, Zhang S, Miller GW, Sun Y, Jain S, Yadav H, Gao P, Patel CJ. 
 Exposome-Wide Association Study and Predictive Risk Score for Incident Alzheimer's Disease and Related Dementias. 
