@@ -45,10 +45,7 @@ Data are not included in this repository due to data use agreement restrictions.
 3.Outputs
 Results are written to <project_dir>/results/ADRD/All/, including Cox regression results, selected exposures, the fitted prediction model and SHAP object, model comparison metrics, and ERS survival analysis results.
 
-4.Terms of Use
-This code is provided for academic, non-commercial use to reproduce the results in the manuscript cited below. Any use of this code must cite the manuscript; redistribution or commercial use is not permitted without prior written permission from the authors.
-
-5.Citation
+4.Citation
 If you use this code, please cite:
 Li C, Zhao C, Lan Y, Ellis RJ, Isaac S, Zhang S, Miller GW, Sun Y, Jain S, Yadav H, Gao P, Patel CJ. 
 Exposome-Wide Association Study and Predictive Risk Score for Incident Alzheimer's Disease and Related Dementias. 
