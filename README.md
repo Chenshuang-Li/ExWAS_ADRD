@@ -49,5 +49,5 @@ Results are written to <project_dir>/results/ADRD/All/, including Cox regression
 If you use this code, please cite:
 Li C, Zhao C, Lan Y, Ellis RJ, Isaac S, Zhang S, Miller GW, Sun Y, Jain S, Yadav H, Gao P, Patel CJ. 
 Exposome-Wide Association Study and Predictive Risk Score for Incident Alzheimer's Disease and Related Dementias. 
-*Alzheimer's & Dementia: The Journal of the Alzheimer's Association*. [Year]; [Volume]([Issue]):[Pages].
+*Alzheimer's & Dementia: The Journal of the Alzheimer's Association*. [Year]; [Volume]:[Pages].
 DOI: [xxx]
