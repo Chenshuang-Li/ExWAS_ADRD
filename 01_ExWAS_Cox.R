@@ -33,6 +33,7 @@ if(!dir.exists(output_path_subgroup)) dir.create(output_path_subgroup, recursive
 covariate_vars <- setdiff(colnames(covariates), "eid")
 independent_vars <- setdiff(colnames(independent), "eid")
 
+#ExWAS for ADRD (Cox)
 
 Uni_glm_model <- function(x, data, outcome_var, covariate_vars, min_cases = 10, min_total = 200, max_iter = 50) {
   
